@@ -1,0 +1,107 @@
+Total scanned functions: 551641 (100%)
+Total clean functions: 502885 (91.16%)
+Total defective functions (excluding errors): 11929 (2.16%)
+Total errors: 36835. Errors w/o duplicates: 36827 (6.68%)
+Total issues (considering multiple issues per function and excluding errors): 22466 (4.07%)
+
+No of issues per severity type: {'ERROR': 2890, 'INFO': 4719, 'WARNING': 14857} and their rates:
+ERROR: 12.86%
+INFO: 21.01%
+WARNING: 66.13%
+
+No of issues per category type: {'compatibility': 17, 'security': 2760, 'correctness': 1282, 'performance': 19, 'best-practice': 4624, 'maintainability': 13764} and their rates:
+compatibility: 0.08%
+security: 12.29%
+correctness: 5.71%
+performance: 0.08%
+best-practice: 20.58%
+maintainability: 61.27%
+
+Top 5 issues per category type:
+
+---> Category: compatibility <---
+    python37-compatibility-importlib2: 17 (100.00%)
+
+---> Category: correctness <---
+    list-modify-while-iterate: 466 (36.35%)
+    useless-eqeq: 285 (22.23%)
+    default-mutable-dict: 195 (15.21%)
+    default-mutable-list: 120 (9.36%)
+    dict-del-while-iterate: 76 (5.93%)
+    OTHERS: 140 (10.92%)
+
+---> Category: performance <---
+    pytorch-tensor: 12 (63.16%)
+    use-earliest-or-latest: 3 (15.79%)
+    batch-import: 2 (10.53%)
+    len-all-count: 2 (10.53%)
+
+---> Category: best-practice <---
+    unspecified-open-encoding: 2536 (54.84%)
+    use-timeout: 681 (14.73%)
+    arbitrary-sleep: 623 (13.47%)
+    open-never-closed: 353 (7.63%)
+    use-raise-for-status: 298 (6.44%)
+    OTHERS: 133 (2.88%)
+
+---> Category: maintainability <---
+    useless-assignment-keyed: 4285 (31.13%)
+    useless-if-body: 3488 (25.34%)
+    is-function-without-parentheses: 3435 (24.96%)
+    useless-if-conditional: 1586 (11.52%)
+    useless-literal: 755 (5.49%)
+    OTHERS: 215 (1.56%)
+
+---> Category: security <---
+    CWE-502: Deserialization of Untrusted Data: 767 (27.79%)
+    CWE-89: Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection'): 543 (19.67%)
+    CWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection'): 224 (8.12%)
+    CWE-327: Use of a Broken or Risky Cryptographic Algorithm: 168 (6.09%)
+    CWE-939: Improper Authorization in Handler for Custom URL Scheme: 139 (5.04%)
+    OTHERS: 919 (33.30%)
+
+
+No of issues, per severity, per category type and their rates:
+{'ERROR': {'best-practice': 976,
+           'compatibility': 17,
+           'correctness': 828,
+           'maintainability': 202,
+           'performance': 3,
+           'security': 804},
+ 'INFO': {'best-practice': 0,
+          'compatibility': 0,
+          'correctness': 285,
+          'maintainability': 4285,
+          'performance': 0,
+          'security': 149},
+ 'WARNING': {'best-practice': 3648,
+             'compatibility': 0,
+             'correctness': 169,
+             'maintainability': 9277,
+             'performance': 16,
+             'security': 1734}}
+
+---> Severity: ERROR <---
+    compatibility: 0.60%
+    security: 28.41%
+    correctness: 29.26%
+    performance: 0.11%
+    best-practice: 34.49%
+    maintainability: 7.14%
+
+---> Severity: INFO <---
+    compatibility: 0.00%
+    security: 3.16%
+    correctness: 6.04%
+    performance: 0.00%
+    best-practice: 0.00%
+    maintainability: 90.80%
+
+---> Severity: WARNING <---
+    compatibility: 0.00%
+    security: 11.68%
+    correctness: 1.14%
+    performance: 0.11%
+    best-practice: 24.58%
+    maintainability: 62.50%
+

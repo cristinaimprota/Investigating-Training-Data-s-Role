@@ -1,0 +1,95 @@
+Total scanned functions: 551641 (100%)
+Total clean functions: 427345 (77.47%)
+Total defective functions (excluding errors): 39085 (7.09%)
+Total errors: 85229. Errors w/o duplicates: 85211 (15.45%)
+Total issues (considering multiple issues per function and excluding errors): 62715 (11.37%)
+
+No of issues per severity type: {'WARNING': 58012, 'ERROR': 3963, 'INFO': 740} and their rates:
+WARNING: 92.50%
+ERROR: 6.32%
+INFO: 1.18%
+
+No of issues per category type: {'security': 5147, 'best-practice': 28578, 'performance': 34, 'maintainability': 27832, 'correctness': 1124} and their rates:
+security: 8.21%
+best-practice: 45.57%
+performance: 0.05%
+maintainability: 44.38%
+correctness: 1.79%
+
+Top 5 issues per category type:
+
+---> Category: best-practice <---
+    unspecified-open-encoding: 14286 (49.99%)
+    pass-body-fn: 7440 (26.03%)
+    use-timeout: 3557 (12.45%)
+    arbitrary-sleep: 1685 (5.90%)
+    use-raise-for-status: 1151 (4.03%)
+    OTHERS: 459 (1.61%)
+
+---> Category: performance <---
+    pytorch-tensor: 33 (97.06%)
+    len-all-count: 1 (2.94%)
+
+---> Category: maintainability <---
+    is-function-without-parentheses: 22561 (81.06%)
+    useless-if-body: 1891 (6.79%)
+    code-after-unconditional-return: 1419 (5.10%)
+    return-not-in-function: 585 (2.10%)
+    useless-assignment-keyed: 484 (1.74%)
+    OTHERS: 892 (3.20%)
+
+---> Category: correctness <---
+    list-modify-while-iterate: 365 (32.47%)
+    default-mutable-dict: 251 (22.33%)
+    unchecked-subprocess-call: 91 (8.10%)
+    dict-del-while-iterate: 86 (7.65%)
+    useless-eqeq: 76 (6.76%)
+    OTHERS: 255 (22.69%)
+
+---> Category: security <---
+    CWE-89: Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection'): 1388 (26.97%)
+    CWE-502: Deserialization of Untrusted Data: 1240 (24.09%)
+    CWE-798: Use of Hard-coded Credentials: 439 (8.53%)
+    CWE-95: Improper Neutralization of Directives in Dynamically Evaluated Code ('Eval Injection'): 288 (5.60%)
+    CWE-706: Use of Incorrectly-Resolved Name or Reference: 277 (5.38%)
+    OTHERS: 1515 (29.43%)
+
+
+No of issues, per severity, per category type and their rates:
+{'ERROR': {'best-practice': 2011,
+           'correctness': 766,
+           'maintainability': 0,
+           'performance': 0,
+           'security': 1149},
+ 'INFO': {'best-practice': 0,
+          'correctness': 76,
+          'maintainability': 484,
+          'performance': 0,
+          'security': 180},
+ 'WARNING': {'best-practice': 26567,
+             'correctness': 282,
+             'maintainability': 27348,
+             'performance': 34,
+             'security': 3765}}
+
+---> Severity: WARNING <---
+    security: 6.49%
+    best-practice: 45.81%
+    performance: 0.06%
+    maintainability: 47.15%
+    correctness: 0.49%
+
+---> Severity: ERROR <---
+    security: 29.27%
+    best-practice: 51.22%
+    performance: 0.00%
+    maintainability: 0.00%
+    correctness: 19.51%
+
+---> Severity: INFO <---
+    security: 24.32%
+    best-practice: 0.00%
+    performance: 0.00%
+    maintainability: 65.41%
+    correctness: 10.27%
+

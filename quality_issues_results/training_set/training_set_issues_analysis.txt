@@ -1,0 +1,112 @@
+Total scanned functions: 4413130 (100%)
+Total clean functions: 4156154 (94.08%)
+Total defective functions (excluding errors): 219723 (4.98%)
+Total errors: 37257. Errors w/o duplicates: 37253 (0.84%)
+Total issues (considering multiple issues per function and excluding errors): 310051 (7.03%)
+No of issues per severity type: {'ERROR': 56229, 'WARNING': 248601, 'INFO': 5221} and their rates:
+ERROR: 18.14%
+WARNING: 80.18%
+INFO: 1.68%
+
+No of issues per category type: {'security': 61899, 'correctness': 19637, 'best-practice': 164952, 'compatibility': 144, 'maintainability': 61684, 'performance': 1735} and their rates:
+security: 19.96%
+correctness: 6.33%
+best-practice: 53.20%
+compatibility: 0.05%
+maintainability: 19.89%
+performance: 0.56%
+
+Top 5 issues per category type:
+
+---> Category: correctness <---
+    use-sys-exit: 3829 (19.50%)
+    unchecked-subprocess-call: 2551 (12.99%)
+    string-is-comparison: 2096 (10.67%)
+    list-modify-while-iterate: 2054 (10.46%)
+    tempfile-without-flush: 1758 (8.95%)
+    OTHERS: 7349 (37.42%)
+
+---> Category: best-practice <---
+    unspecified-open-encoding: 92200 (55.90%)
+    use-timeout: 22588 (13.69%)
+    use-raise-for-status: 18466 (11.19%)
+    arbitrary-sleep: 15715 (9.53%)
+    open-never-closed: 10586 (6.42%)
+    OTHERS: 5397 (3.27%)
+
+---> Category: compatibility <---
+    python36-compatibility-Popen2: 110 (76.39%)
+    python37-compatibility-importlib2: 16 (11.11%)
+    python36-compatibility-Popen1: 15 (10.42%)
+    python37-compatibility-importlib3: 1 (0.69%)
+    python37-compatibility-httpsconn: 1 (0.69%)
+    OTHERS: 1 (0.69%)
+
+---> Category: maintainability <---
+    is-function-without-parentheses: 52403 (84.95%)
+    code-after-unconditional-return: 2560 (4.15%)
+    useless-inner-function: 2109 (3.42%)
+    useless-assignment-keyed: 1961 (3.18%)
+    useless-if-body: 1948 (3.16%)
+    OTHERS: 703 (1.14%)
+
+---> Category: performance <---
+    pytorch-tensor: 1494 (86.11%)
+    len-all-count: 126 (7.26%)
+    use-earliest-or-latest: 95 (5.48%)
+    batch-import: 18 (1.04%)
+    access-foreign-keys: 2 (0.12%)
+
+---> Category: security <---
+    CWE-502: Deserialization of Untrusted Data: 15246 (24.63%)
+    CWE-89: Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection'): 12871 (20.79%)
+    CWE-95: Improper Neutralization of Directives in Dynamically Evaluated Code ('Eval Injection'): 6701 (10.83%)
+    CWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection'): 4112 (6.64%)
+    CWE-327: Use of a Broken or Risky Cryptographic Algorithm: 3769 (6.09%)
+    OTHERS: 19200 (31.02%)
+
+
+No of issues, per severity, per category type and their rates:
+{'ERROR': {'best-practice': 26548,
+           'compatibility': 144,
+           'correctness': 9428,
+           'maintainability': 2109,
+           'performance': 95,
+           'security': 17146},
+ 'INFO': {'best-practice': 0,
+          'compatibility': 0,
+          'correctness': 891,
+          'maintainability': 1974,
+          'performance': 0,
+          'security': 2356},
+ 'WARNING': {'best-practice': 138404,
+             'compatibility': 0,
+             'correctness': 9318,
+             'maintainability': 57601,
+             'performance': 1640,
+             'security': 41413}}
+
+---> Severity: ERROR <---
+    security: 30.91%
+    correctness: 17.00%
+    best-practice: 47.86%
+    compatibility: 0.26%
+    maintainability: 3.80%
+    performance: 0.17%
+
+---> Severity: WARNING <---
+    security: 16.67%
+    correctness: 3.75%
+    best-practice: 55.72%
+    compatibility: 0.00%
+    maintainability: 23.19%
+    performance: 0.66%
+
+---> Severity: INFO <---
+    security: 45.13%
+    correctness: 17.07%
+    best-practice: 0.00%
+    compatibility: 0.00%
+    maintainability: 37.81%
+    performance: 0.00%
+

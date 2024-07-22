@@ -1,0 +1,107 @@
+Total scanned functions: 551641 (100%)
+Total clean functions: 480026 (87.02%)
+Total defective functions (excluding errors): 32288 (5.85%)
+Total errors: 39334. Errors w/o duplicates: 39327 (7.13%)
+Total issues (considering multiple issues per function and excluding errors): 73251 (13.28%)
+No of issues per severity type: {'ERROR': 4891, 'INFO': 5565, 'WARNING': 62795} and their rates:
+ERROR: 6.68%
+INFO: 7.60%
+WARNING: 85.73%
+
+No of issues per category type: {'compatibility': 38, 'maintainability': 47882, 'performance': 35, 'best-practice': 18389, 'correctness': 1872, 'security': 5035} and their rates:
+compatibility: 0.05%
+maintainability: 65.37%
+performance: 0.05%
+best-practice: 25.10%
+correctness: 2.56%
+security: 6.87%
+
+Top 5 issues per category type:
+
+---> Category: compatibility <---
+    python37-compatibility-importlib2: 37 (97.37%)
+    python36-compatibility-Popen2: 1 (2.63%)
+
+---> Category: maintainability <---
+    is-function-without-parentheses: 36733 (76.72%)
+    useless-assignment-keyed: 4951 (10.34%)
+    useless-if-body: 3956 (8.26%)
+    useless-if-conditional: 1479 (3.09%)
+    useless-literal: 464 (0.97%)
+    OTHERS: 299 (0.62%)
+
+---> Category: performance <---
+    pytorch-tensor: 27 (77.14%)
+    use-earliest-or-latest: 4 (11.43%)
+    len-all-count: 2 (5.71%)
+    batch-import: 2 (5.71%)
+
+---> Category: best-practice <---
+    unspecified-open-encoding: 12981 (70.59%)
+    use-timeout: 2202 (11.97%)
+    arbitrary-sleep: 1557 (8.47%)
+    use-raise-for-status: 925 (5.03%)
+    open-never-closed: 578 (3.14%)
+    OTHERS: 146 (0.79%)
+
+---> Category: correctness <---
+    list-modify-while-iterate: 562 (30.02%)
+    unchecked-subprocess-call: 332 (17.74%)
+    useless-eqeq: 273 (14.58%)
+    default-mutable-dict: 257 (13.73%)
+    dict-del-while-iterate: 109 (5.82%)
+    OTHERS: 339 (18.11%)
+
+---> Category: security <---
+    CWE-502: Deserialization of Untrusted Data: 1318 (26.18%)
+    CWE-89: Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection'): 752 (14.94%)
+    CWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection'): 488 (9.69%)
+    CWE-327: Use of a Broken or Risky Cryptographic Algorithm: 401 (7.96%)
+    CWE-706: Use of Incorrectly-Resolved Name or Reference: 387 (7.69%)
+    OTHERS: 1689 (33.55%)
+
+
+No of issues, per severity, per category type and their rates:
+{'ERROR': {'best-practice': 2135,
+           'compatibility': 38,
+           'correctness': 1032,
+           'maintainability': 290,
+           'performance': 4,
+           'security': 1311},
+ 'INFO': {'best-practice': 0,
+          'compatibility': 0,
+          'correctness': 273,
+          'maintainability': 4951,
+          'performance': 0,
+          'security': 341},
+ 'WARNING': {'best-practice': 16254,
+             'compatibility': 0,
+             'correctness': 567,
+             'maintainability': 42641,
+             'performance': 31,
+             'security': 3289}}
+
+---> Severity: ERROR <---
+    compatibility: 0.79%
+    maintainability: 6.03%
+    performance: 0.08%
+    best-practice: 44.39%
+    correctness: 21.46%
+    security: 27.26%
+
+---> Severity: INFO <---
+    compatibility: 0.00%
+    maintainability: 88.97%
+    performance: 0.00%
+    best-practice: 0.00%
+    correctness: 4.91%
+    security: 6.13%
+
+---> Severity: WARNING <---
+    compatibility: 0.00%
+    maintainability: 67.92%
+    performance: 0.05%
+    best-practice: 25.89%
+    correctness: 0.90%
+    security: 5.24%
+
