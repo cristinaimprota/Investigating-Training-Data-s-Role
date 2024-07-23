@@ -5,7 +5,7 @@ MODEL_PATH="deepseek-ai/deepseek-coder-1.3b-instruct"
 
 # evaluate 5 times, every 20% of epoch, based on total steps number
 
-accelerate launch --config_file /evo/homes/improtac/.cache/huggingface/accelerate/default_config.yaml --num_processes=3 finetune_and_eval_deepseek.py \
+accelerate launch --config_file ./default_config.yaml --num_processes=3 finetune_and_eval_deepseek.py \
     --model_name_or_path $MODEL_PATH \
     --train_path $TRAIN_PATH \
     --eval_path $EVAL_PATH \
