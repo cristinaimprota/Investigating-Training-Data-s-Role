@@ -26,7 +26,8 @@ The folder also contains the graphs of the evaluation loss curve for both DeepSe
 ## 3. Detection of quality issues
 
 The ``3_quality_issues_detection`` folder contains the code to detect and process the quality issues in both the training set and the model's predictions using the Semgrep static analyzer. It also contains the code to remove the found low-quality functions from the training set, resulting in the *clean training set* also stored on Zenodo.
-The ``analyze_code.py`` script contains the complete list of Semgrep rules used in our study. ***Important note:*** *Semgrep's list of rules varies over time, thereby experiments may produce slightly different results.*
+The ``analyze_code.py`` script contains the complete list of Semgrep rules used in our study. 
+***Important note:*** *Semgrep's list of rules varies over time, thereby experiments may produce slightly different results.*
 
 * Install Semgrep by running the following command: ```python3 -m pip install semgrep```
 * Run ```semgrep login``` to create your account and login to Semgrep to be able to use all the detection rules. Further details on [Semgrep](https://github.com/semgrep/semgrep).
