@@ -18,7 +18,7 @@ The ``2_training_and_inference`` folder contains the code to perform the fine-tu
 
 * ``requirements.txt`` lists all the required packages, which can be installed with the following command: ```pip install -r requirements.txt```
 * Use the ``run_finetuning_and_eval.sh`` script to fine-tune DeepSeek-Coder-1.3B, specifying the ``TRAIN_PATH``, ``EVAL_PATH``, ``OUTPUT_PATH``. 
-* Use the ``finetune_and_eval_deepseek.py`` script to generate and automatically evaluate the predictions with EM and CrystalBLEU scores. 
+* Use the ``run_deepseek_inference.py`` script to generate and automatically evaluate the predictions with EM and CrystalBLEU scores. 
 
 The folder also contains the graphs of the evaluation loss curve for both DeepSeek-Coder full (DSCf) and DeepSeek-Coder cleaned (DSCc) models. 
 All the trained models checkpoints (for each model we stored the final/best chekpoint only) are available on Zenodo at the following link: [models chekpoints](https://zenodo.org/doi/10.5281/zenodo.12773307). The *models chekpoints.zip* file contains: (i) the checkpoint for *DSC_full* (DSCf), i.e., the model trained on the full training set (*full_data_training_set.json*); and (ii) the checkpoint for *DSC_cleaned* (DSCc), i.e., the model trained on the cleaned version of the training set (*clean_training_set.json*).
@@ -38,7 +38,7 @@ The ``analyze_code.py`` script contains the complete list of Semgrep rules used 
 * The result of the analysis will be (i) a report of the detected code quality issues; (ii) the list of training set indexes containing low-quality functions and syntactically incorrect functions.
 * To remove all low-quality and incorrect functions from the training set, use the following command: ```python3 clean_dataset.py <training_set>.json```
 
-The ``quality_issues_results`` folder contains the results of our analysis, both in terms of Semgrep reports on quality issues and full list of low-quality and syntactically incorrect functions, for the training set, pre-trained only (PTO), DeepSeek-Coder full (DSCf) and DeepSeek-Coder cleaned (DSCc) predictions.
+The ``quality_issues_results`` folder contains the results of our analysis, both in terms of Semgrep reports on quality issues and full list of low-quality and syntactically incorrect functions, for the training set, pre-trained only, DeepSeek-Coder full and DeepSeek-Coder cleaned predictions.
 
 The ``semgrep_manual_validation`` folder contains the results of the manual validation of a random sample of 400 quality issues identified by Semgrep. Each file reports the affected function, the issue category, the defective line(s), the message outputted by Semgrep and the *correct/incorrect* classification. 
 
