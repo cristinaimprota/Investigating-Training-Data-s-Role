@@ -10,7 +10,7 @@ The ``1_dataset_cleaning_pipeline`` folder contains the scripts to clean the ~24
 *
 *
 
-All the processed data can be found on Zenodo at the following link: [datasets](https://zenodo.org/records/12773308).
+All the processed data can be found on Zenodo at the following link: [datasets](https://zenodo.org/records/12773308). The *zip* file contains: (i) the original ~4.4M training set (*full_data_training_set.json*); (ii) the cleaned ~4.2 training set (i.e., from which we removed low-quality and syntactically incorrect functions) (*clean_training_set.json*); (iii) the ~551k validation and test sets (*validation_set.json*, *test_set.json*).
 
 ## 2. Model training and inference 
 
@@ -20,8 +20,10 @@ The ``2_training_and_inference`` contains the code to perform the fine-tuning an
 * Use the ``run_finetuning_and_eval.sh`` script to fine-tune DeepSeek-Coder-1.3B, specifying the ``TRAIN_PATH``, ``EVAL_PATH``, ``OUTPUT_PATH`` and the appropriate hyper-parameters. 
 * Use the ``finetune_and_eval_deepseek.py`` script to generate and automatically evaluate the predictions with EM and CrystalBLEU scores. 
 
-All the trained models checkpoints (for each model we stored the final/best chekpoint only) are available on Zenodo at the following link: [models chekpoints](https://zenodo.org/records/12773308).
 The folder also contains the graphs of the evaluation loss curve for both DeepSeek-Coder full (DSCf) and DeepSeek-Coder cleaned (DSCc) models. 
+All the trained models checkpoints (for each model we stored the final/best chekpoint only) are available on Zenodo at the following link: [models chekpoints](https://zenodo.org/records/12773308). The *zip* file contains: (i) the checkpoint for *DSC_full*, i.e., the model trained on the full training set; and (ii) the checkpoint for *DSC_cleaned*, i.e., the model trained on the cleaned version of the training set.
+
+All models predictions are available on Zenodo at the following link: [models predictions](https://zenodo.org/records/12773308). The *zip* file contains: the functions predicted by the three models (i.e., PTO, DSCf and DSCc) when tested (i) on our test set (*our_testset_predictions*); and (ii) on the [HumanEval benchmark](https://github.com/openai/human-eval) (*humaneval_predictions*).
 
 ## 3. Detection of quality issues
 
@@ -37,6 +39,8 @@ The ``analyze_code.py`` script contains the complete list of Semgrep rules used 
 * To remove all low-quality and incorrect functions from the training set, use the following command: ```python3 clean_dataset.py <training_set>.json```
 
 The ``quality_issues_results`` folder contains the results of our analysis, both in terms of Semgrep reports on quality issues and full list of low-quality and syntactically incorrect functions, for the training set, pre-trained only (PTO), DeepSeek-Coder full (DSCf) and DeepSeek-Coder cleaned (DSCc) predictions.
+
+The ``semgrep_manual_validation`` folder contains the results of the manual validation of a random sample of 400 quality issues identified by Semgrep. Each file reports the affected function, the issue category, defective line and message outputted by Semgrep, and the *correct/incorrect* classification. 
 
 ## 4. Statistical analysis
 
