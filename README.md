@@ -10,7 +10,7 @@ The ``1_dataset_preprocessing_and_filtering`` folder contains the scripts to pre
 *
 *
 
-All the processed data can be found on Zenodo at the following link: [datasets](https://zenodo.org/doi/10.5281/zenodo.12773307). The *datasets.zip* file contains: (i) the original ~4.4M training set obtained by preprocessing and filtering The Stack (*full_data_training_set.json*); (ii) the cleaned ~4.2 training set (i.e., from which we removed low-quality and syntactically incorrect functions using Semgrep, as described in [**3. Detection of quality issues**](#3.-detection-of-quality-issues)) (*clean_training_set.json*); (iii) the ~551k validation and test sets also obtained by preprocessing and filtering The Stack (*validation_set.json*, *test_set.json*).
+All the processed data can be found on Zenodo at the following link: [datasets](https://zenodo.org/doi/10.5281/zenodo.12773307). The *datasets.zip* file contains: (i) the original ~4.4M training set obtained by preprocessing and filtering The Stack (*full_data_training_set.json*); (ii) the cleaned ~4.2 training set (i.e., from which we removed low-quality and syntactically incorrect functions using Semgrep, as described in [**3. Detection of quality issues**](#3-detection-of-quality-issues)) (*clean_training_set.json*); (iii) the ~551k validation and test sets also obtained by preprocessing and filtering The Stack (*validation_set.json*, *test_set.json*).
 
 ## 2. Model training and inference 
 
