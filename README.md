@@ -4,11 +4,15 @@ This repository is the replication package of the work "Quality In, Quality Out:
 
 ## 1. Dataset preprocessing and filtering  
 
-The ``1_dataset_preprocessing_and_filtering`` folder contains the scripts to preprocess and filter the ~24M Python files downloaded from [*The Stack dataset*](https://huggingface.co/datasets/bigcode/the-stack), resulting in the 5,516,412 final pairs of \<docstring + signature, code\>. Specifically: 
+The ``1_dataset_preprocessing_and_filtering`` folder contains the scripts to preprocess and filter the ~24M Python files downloaded from [*The Stack dataset*](https://huggingface.co/datasets/bigcode/the-stack), resulting in the 5,516,412 final pairs of \<docstring + signature, code\>. Specifically, the scripts are used to: 
 
-*
-*
-*
+1. Download the files written in Python and extract only functions having a docstring;
+2. Remove noisy information from the docstrings, including empty lines, external links, usage examples, parameters descriptions, non-ASCII characters, special tags, etc.;
+3. Discard too short descriptions, i.e., less than 10 words;
+4. Clean the code by removing inline comments and formatting all functions;
+5. Exclude *test* functions and *pass* functions (i.e., placeholders for future implementation);
+6. Discard samples featuring a description and/or function that is too long (i.e., 50 tokens for descriptions and 450 for functions);
+7. Split the final dataset into training, validation and test sets.
 
 All the processed data can be found on Zenodo at the following link: [datasets](https://zenodo.org/doi/10.5281/zenodo.12773307). The *datasets.zip* file contains: (i) the original ~4.4M training set obtained by preprocessing and filtering The Stack (*full_data_training_set.json*); (ii) the cleaned ~4.2 training set (i.e., from which we removed low-quality and syntactically incorrect functions using Semgrep, as described in [**3. Detection of quality issues**](#3-detection-of-quality-issues)) (*clean_training_set.json*); (iii) the ~551k validation and test sets also obtained by preprocessing and filtering The Stack (*validation_set.json*, *test_set.json*).
 
