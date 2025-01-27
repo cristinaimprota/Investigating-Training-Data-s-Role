@@ -16,6 +16,8 @@ The ``1_dataset_preprocessing_and_filtering`` folder contains the scripts to pre
 
 All the processed data can be found on Zenodo at the following link: [datasets](https://zenodo.org/doi/10.5281/zenodo.12773307). The *datasets.zip* file contains: (i) the original ~4.4M training set obtained by preprocessing and filtering The Stack (*full_data_training_set.json*); (ii) the cleaned ~4.2 training set (i.e., from which we removed low-quality and syntactically incorrect functions using Semgrep, as described in [**3. Detection of quality issues**](#3-detection-of-quality-issues)) (*clean_training_set.json*); (iii) the ~551k validation and test sets also obtained by preprocessing and filtering The Stack (*validation_set.json*, *test_set.json*).
 
+The ``docstrings_manual_validation.xlsx`` file contains the results of the manual validation of a random sample of 200 <docstring, code> pairs to account for incorrect or outdated docstrings in the collected data. We rated each docstring across two dimensions: *content adequacy* (i.e., the extent to which the comment summarizes the information that can be inferred from the code); and *understandability* (i.e., the extent to which the comment is easy to read/understand).
+
 ## 2. Model training and inference 
 
 The ``2_training_and_inference`` folder contains the code to perform the fine-tuning and inference for DeepSeek-Coder-1.3B and evaluate its performance in code generation using *Exact Match (EM)* accuracy and *CrystalBLEU* score. Specifically:
